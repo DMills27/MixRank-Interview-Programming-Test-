@@ -4,7 +4,7 @@ from requests.models import Response
 from typing import List, Tuple
 from bs4 import BeautifulSoup
 
-# Convert this to a frozenset to prevent any unexected modifications/mutations that may occur when scaling up.
+# Maybe be better to convert this to a frozenset or tuple to prevent any unexected modifications/mutations that may occur when scaling up.
 # This can occur with multithreading/concurrency etc.
 # It's genuinely better to always have an immutable data structure in situations like these.
 logo_urls = []
@@ -53,6 +53,7 @@ def get_logo_path(_url: str, _response: Response) -> str:
         # Need a better heuristic for determining whether this is indeed a valid logo. 
         first_logo_path = next(item for item in temporary_list_for_logos if item is not None)
         logo_urls.append((_url, first_logo_path))
+    print(logo_urls)
     return logo_urls
 
 # Below is a function to clean and normalise the links for the logo urls that were extracted from get_logo_path function.
