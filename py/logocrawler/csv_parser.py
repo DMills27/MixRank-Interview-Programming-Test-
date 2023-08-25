@@ -16,7 +16,7 @@ def read_from_csv(file_path: str) -> List[str]:
             data_list.append(list(map(line_formatter, row)))
     return flatten_list(data_list)
 
-def write_to_csv(file_path: str, data_list: List[Tuple[str, str]]):
+def write_to_csv(file_path: str, data_list: List[Tuple[str, str]]) -> None:
     with open(file_path, 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         for row in data_list:
