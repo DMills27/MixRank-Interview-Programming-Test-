@@ -20,7 +20,7 @@ where $p(x_i)$ is the probability of intensity $x_i$ occurring in the histogram,
 If the entropy values of the two images are close or similar, it indicates that the images have similar distributions of pixel intensities, which suggests visual similarity.
 
 ## Using concurrency to achieve better results
-To accomodate greater requests one could use a combination of concurrency and caching with a data store such as Redis.
+To accomodate greater requests one could use a combination of concurrency, distributed architecture on a single server and caching with a data store such as Redis.
 
 In order to add concurrency to the solution outlined `base_crawler.py`:
 - We would first define a Queue that would store the URLs that want to crawl for the logos.
