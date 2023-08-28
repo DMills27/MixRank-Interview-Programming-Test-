@@ -4,7 +4,7 @@ Some edge cases result when a site such as [biznessapps.com](biznessapps) is cra
 Sites such as facebook and youtube which use `.svgs` that are embedded in the html and thus not necessary for them to be saved as a separate asset. 
 This would have to be pruned with more refined techniques such as perceptual hashing where one could compare the images embedding on a given page with the favicon and see if the same hash is generated. Perceptual hashing
 can be considered an analogue to conventional hashing.
-An alternative approach would be to use histogram entropy estimation with the logos under study being the same as described in the sentence. A brief sketch of this method is given as follows:
+An alternative approach would be to use histogram entropy estimation with the logos under study. A brief sketch of this method is given as follows:
 
 - Histogram calculation: Calculate the pixel intesities for each image, one can use the formula given [here](https://math.stackexchange.com/a/1019257).
 - Normalise the histograms: By dividing the frequency of each intensity value by the total number of pixels in the image. This ensures that the histograms are comparable regardless of image size.
