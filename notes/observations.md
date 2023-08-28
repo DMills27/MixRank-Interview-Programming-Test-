@@ -6,7 +6,7 @@ This would have to be pruned with more refined techniques such as perceptual has
 can be consider an analogue to convenitional hashing
 An alternative approach would be to use histogram entropy estimation with the logos under study being the same as described in the sentence. A breif sketch of this method is given as follows:
 
-- Histogram calculation: Calculate the pixel intesities for each image, one can use the formula given (here)[https://math.stackexchange.com/a/1019257].
+- Histogram calculation: Calculate the pixel intesities for each image, one can use the formula given [here](https://math.stackexchange.com/a/1019257).
 - Normalise the histograms: By dividing the frequency of each intensity value by the total number of pixels in the image. This ensures that the histograms are comparable regardless of image size.
 - Entrophy calculation: Calculate the entropy of the normalized histograms. Entropy is a measure of the randomness or uncertainty in a distribution. It is calculated using the formula:
 ```math
