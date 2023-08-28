@@ -2,8 +2,8 @@
 ## Issues and edge cases
 Some edge cases result when a site such as [biznessapps.com](biznessapps) is crawled. The edge case stems from the fact that response body may contain a number of assets with "logo" in its metadata. 
 Sites such as facebook and youtube which use `.svgs` that are embedded in the html and thus not necessary for them to be saved as a separate asset. 
-This would have to be pruned with more refined techniques such as perceptual hashing where could compare the images embedding on a given page with the favicon and see if the same hash is generated. Perceptual hashing
-can be consider an analogue to convenitional hashing
+This would have to be pruned with more refined techniques such as perceptual hashing where one could compare the images embedding on a given page with the favicon and see if the same hash is generated. Perceptual hashing
+can be considered an analogue to conventional hashing.
 An alternative approach would be to use histogram entropy estimation with the logos under study being the same as described in the sentence. A brief sketch of this method is given as follows:
 
 - Histogram calculation: Calculate the pixel intesities for each image, one can use the formula given [here](https://math.stackexchange.com/a/1019257).
